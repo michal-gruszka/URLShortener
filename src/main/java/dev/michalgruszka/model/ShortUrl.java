@@ -18,7 +18,7 @@ public class ShortUrl {
 	@Column(name = "original_url", unique = true)
 	private String originalUrl;
 	
-	@Column(name = "short_uri", unique = true)
+	@Column(name = "short_url", unique = true)
 	private String shortUrl;
 	
 	
