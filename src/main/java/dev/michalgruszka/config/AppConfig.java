@@ -29,10 +29,10 @@ import org.springframework.web.servlet.view.JstlView;
 @PropertySource("classpath:database.properties")
 public class AppConfig {
 	
-	private final String PROPERTY_DRIVER = "driver";
-	private final String PROPERTY_URL = "url";
-	private final String PROPERTY_USERNAME = "user";
-	private final String PROPERTY_PASSWORD = "password";
+	private final String PROPERTY_DRIVER = "db.driver";
+	private final String PROPERTY_URL = "db.url";
+	private final String PROPERTY_USERNAME = "db.user";
+	private final String PROPERTY_PASSWORD = "db.password";
 	private final String PROPERTY_SHOW_SQL = "hibernate.show_sql";
 	private final String PROPERTY_DIALECT = "hibernate.dialect";
 
