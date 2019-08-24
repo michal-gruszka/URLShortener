@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "short_url")
-public class ShortUrl {
+public class Url {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +22,9 @@ public class ShortUrl {
 	private String shortUrl;
 	
 	
-	protected ShortUrl() {}
+	protected Url() {}
 	
-	public ShortUrl(String originalUrl, String shortUrl) {
+	public Url(String originalUrl, String shortUrl) {
 		this.originalUrl = originalUrl;
 		this.shortUrl = shortUrl;
 	}
