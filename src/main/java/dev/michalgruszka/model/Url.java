@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import dev.michalgruszka.customvalidation.ValidUrl;
+
 @Entity
 @Table(name = "short_url")
 public class Url {
@@ -15,6 +17,7 @@ public class Url {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@ValidUrl
 	@Column(name = "original_url", unique = true)
 	private String originalUrl;
 	
@@ -22,13 +25,8 @@ public class Url {
 	private String shortUrl;
 	
 	
-	protected Url() {}
+	public Url() {}
 	
-	public Url(String originalUrl, String shortUrl) {
-		this.originalUrl = originalUrl;
-		this.shortUrl = shortUrl;
-	}
-
 	
 	public Long getId() {
 		return id;
