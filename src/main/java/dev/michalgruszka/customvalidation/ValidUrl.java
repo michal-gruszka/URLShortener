@@ -11,7 +11,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = UrlValidator.class)
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Url {
+public @interface ValidUrl {
 
 	String message() default "Invalid URL";
 	
