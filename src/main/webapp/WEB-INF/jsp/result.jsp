@@ -2,7 +2,8 @@
 <body>
 
 	<h2>This is your shortened URL:</h2>
-    <br><a href = ${shortURL}>${shortURL}</a>
+	<br>
+	<a href=${url.originalUrl}>${url.originalUrl}</a>
 
 </body>
 </html>
