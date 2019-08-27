@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class UrlValidator implements ConstraintValidator<Url, String>{
+public class UrlValidator implements ConstraintValidator<ValidUrl, String>{
 
 	private static final String URL_REGEX =
 			"^(https?:\\/\\/)?([\\w\\Q$-_+!*'(),%\\E]+\\.)+(\\w{2,63})(:\\d{1,4})?([\\w\\Q/$-_+!*'(),%\\E]+\\.?[\\w])*\\/?$";
