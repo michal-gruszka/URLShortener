@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import dev.michalgruszka.customvalidation.ValidUrl;
 
 @Entity
-@Table(name = "short_url")
+@Table(name = "url")
 public class Url {
 
 	@Id
