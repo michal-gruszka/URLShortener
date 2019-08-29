@@ -16,18 +16,17 @@ public class Url {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@ValidUrl
 	@Column(name = "original_url", unique = true)
 	private String originalUrl;
-	
+
 	@Column(name = "short_url", unique = true)
 	private String shortUrl;
-	
-	
-	public Url() {}
-	
-	
+
+	public Url() {
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -41,6 +40,9 @@ public class Url {
 	}
 
 	public void setOriginalUrl(String originalUrl) {
+		if (!originalUrl.startsWith("http://") && !originalUrl.startsWith("https://")) {
+			originalUrl = "http://" + originalUrl;
+		}
 		this.originalUrl = originalUrl;
 	}
 
@@ -51,6 +53,5 @@ public class Url {
 	public void setShortUrl(String shortUrl) {
 		this.shortUrl = shortUrl;
 	}
-	
-	
+
 }
