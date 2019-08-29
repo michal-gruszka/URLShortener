@@ -5,7 +5,7 @@
 
 	<h2>URL shortener</h2>
 
-	<form:form action="result" method="post" modelAttribute="url">
+	<form:form action="/" method="post" modelAttribute="url">
 
 		URL: <form:input path="originalUrl" />
 		<form:errors path="originalUrl" cssStyle="color: #ff0000;" />
