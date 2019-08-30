@@ -1,0 +1,9 @@
+﻿CREATE TABLE IF NOT EXISTS url (
+	id serial PRIMARY KEY,
+	original_url TEXT UNIQUE NOT NULL,
+	code TEXT UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS code_pool (
+	code TEXT PRIMARY KEY
+);
