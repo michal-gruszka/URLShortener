@@ -1,6 +1,5 @@
 package dev.michalgruszka.repository;
 
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
@@ -10,7 +9,7 @@ public interface UrlRepository extends CrudRepository<Url, Long> {
 
 	Url findByOriginalUrl(String originalUrl);
 	
-	Url findByShortUrl(String shortUrl);
+	Url findByCode(String code);
 	
 	/**
 	 * Uses a database function which:

@@ -20,7 +20,7 @@ public class RedirectController {
 		
 		try {
 			
-			Url url = urlService.getByShortUrl(code);
+			Url url = urlService.getByCode(code);
 			return "redirect:" + url.getOriginalUrl();
 
 			

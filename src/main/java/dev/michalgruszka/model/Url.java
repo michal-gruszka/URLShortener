@@ -21,8 +21,8 @@ public class Url {
 	@Column(name = "original_url", unique = true)
 	private String originalUrl;
 
-	@Column(name = "short_url", unique = true)
-	private String shortUrl;
+	@Column(name = "code", unique = true)
+	private String code;
 
 	public Url() {
 	}
@@ -46,12 +46,12 @@ public class Url {
 		this.originalUrl = originalUrl;
 	}
 
-	public String getShortUrl() {
-		return shortUrl;
+	public String getCode() {
+		return code;
 	}
 
-	public void setShortUrl(String shortUrl) {
-		this.shortUrl = shortUrl;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 }

@@ -29,8 +29,8 @@ public class UrlService {
 	}
 	
 	@Transactional
-	public Url getByShortUrl(String shortUrl) {
-		return repository.findByShortUrl(shortUrl);
+	public Url getByCode(String code) {
+		return repository.findByCode(code);
 	}
 	
 	@Transactional
