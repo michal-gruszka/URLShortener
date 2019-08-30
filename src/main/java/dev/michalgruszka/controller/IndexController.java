@@ -37,7 +37,7 @@ public class IndexController {
 		if(shortUrl == null) {
 			return "error";
 		}
-		url.setShortUrl(shortUrl);
+		model.addAttribute("shortUrl", shortUrl);
 		
 		return "result";
 	}

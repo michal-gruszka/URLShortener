@@ -3,7 +3,7 @@
 
 	<h2>This is your shortened URL:</h2>
 	<br>
-	<a href=${url.shortUrl}>${url.shortUrl}</a>
+	<a href=${shortUrl}>${shortUrl}</a>
 
 </body>
 </html>
