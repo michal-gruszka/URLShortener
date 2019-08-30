@@ -1,15 +1,15 @@
-﻿CREATE OR REPLACE FUNCTION get_code_for(originalUrl text)
+﻿CREATE OR REPLACE FUNCTION get_code_for(provided_url text)
 RETURNS text AS
 $func$
 DECLARE
-  shortUrl varchar;
+  code_var varchar;
 BEGIN
-SELECT short_url FROM url WHERE original_url = originalUrl INTO shortUrl;
-IF shortUrl IS NULL THEN
-	SELECT code FROM code_pool INTO shortUrl;
-	INSERT INTO url(original_url, short_url) VALUES (originalUrl, shortUrl);
-	DELETE FROM code_pool WHERE code = shortUrl;
+SELECT code FROM url WHERE original_url = provided_url INTO code_var;
+IF code_var IS NULL THEN
+	SELECT code FROM code_pool INTO code_var;
+	INSERT INTO url(original_url, code) VALUES (provided_url, code_var);
+	DELETE FROM code_pool WHERE code = code_var;
 END IF;
-RETURN shortUrl;
+RETURN code_var;
 END
 $func$ LANGUAGE plpgsql;
