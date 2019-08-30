@@ -13,7 +13,7 @@ public class UrlValidator implements ConstraintValidator<ValidUrl, String>{
 
 	private static final Pattern URL_PATTERN = Pattern.compile(URL_REGEX);
 
-	
+	// TODO exclude own domain
 	@Override
 	public boolean isValid(String url, ConstraintValidatorContext context) {
 		
