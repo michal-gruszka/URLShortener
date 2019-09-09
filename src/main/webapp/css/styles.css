@@ -1,0 +1,80 @@
+body {
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+	background-size: 100% 110%;
+}
+h1, h2, h3, h4, h5, h6, a {
+  margin:0; padding:0;
+}
+.url {
+  margin:0 auto;
+  max-width:500px;
+}
+.url-header {
+  color:#fff;
+  text-align:center;
+  font-size:300%;
+}
+
+ .url-header h1 {
+   text-shadow: 0px 5px 15px #000; 
+}
+
+.url-form {
+  border:.5px solid #fff;
+  background: #7ec1fc;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+}
+.url-form h3 {
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+}
+.url-form {
+  box-sizing:border-box;
+  padding-top:15px;
+	padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.url input[type="text"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+.url-form input[type="submit"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+}
+
+.error-text {
+	color: red;
+	font-weight: bold;
+}
+
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .url-form h3 {
+    text-align:center;
+    margin:0;
+  }
+  .url-button {
+    margin-bottom:10px;
+  }
+}

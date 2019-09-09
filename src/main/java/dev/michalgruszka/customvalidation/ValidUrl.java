@@ -13,7 +13,7 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ValidUrl {
 
-	String message() default "Invalid URL";
+	String message() default "Invalid URL format";
 	
 	Class<?>[] groups() default { };
 	

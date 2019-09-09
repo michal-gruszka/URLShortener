@@ -18,6 +18,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -27,7 +29,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableJpaRepositories("dev.michalgruszka.repository")
 @ComponentScan("dev.michalgruszka")
 @PropertySource("classpath:database.properties")
-public class AppConfig {
+public class AppConfig implements WebMvcConfigurer {
 	
 	private final String PROPERTY_DRIVER = "db.driver";
 	private final String PROPERTY_URL = "db.url";
@@ -81,4 +83,9 @@ public class AppConfig {
 		transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 		return transactionManager;
 	}
+	
+	@Override
+	public void addResourceHandlers(final ResourceHandlerRegistry registry){
+	    registry.addResourceHandler("/css/**").addResourceLocations("/css/");
+	};
 }

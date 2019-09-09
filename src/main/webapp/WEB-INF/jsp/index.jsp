@@ -1,17 +1,25 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 <body>
-
-	<h2>URL shortener</h2>
-
+<div class="url">
+	<div class="url-header">
+		<h1>URL Shortener</h1>
+	</div>
+	<div class="url-form">
+	<h3>URL:</h3>
 	<form:form action="/" method="post" modelAttribute="url">
+		<form:errors path="originalUrl" class="error-text"/>
 
-		URL: <form:input path="originalUrl" />
-		<form:errors path="originalUrl" cssStyle="color: #ff0000;" />
+		<form:input type="text" path="originalUrl" />
 
-		<input type="submit" value="Shorten URL" />
+		<input type="submit" value="Shorten" class="url-button"/>
 	</form:form>
-
+	
+	</div>
+</div>
 </body>
 </html>
